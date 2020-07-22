@@ -1,0 +1,27 @@
+
+{
+    "name": "oxid-academy/category-logger",
+    "description": "Logs category creation, deletion and modification.",
+    "type": "oxideshop-module",
+    "homepage": "https://oxid-esales.com",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "OXID Academy",
+            "email": "academy@oxid-esales.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "OxidAcademy\\CategoryLogger\\": "../../../source/modules/oxac/category-logger"
+        }
+    },
+    "extra": {
+        "oxideshop": {
+          "target-directory": "oxac/category-logger"
+        }
+    }
+}
