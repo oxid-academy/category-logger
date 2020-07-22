@@ -3,6 +3,6 @@ services:
         public: false
         autowire: true
 
-    OxidAcademy\CategoryLogger\Event\EventSubscriber:
-        class: OxidAcademy\CategoryLogger\Event\EventSubscriber
+    OxidAcademy\CategoryLogger\Event\LoggerEventSubscriber:
+        class: OxidAcademy\CategoryLogger\Event\LoggerEventSubscriber
         tags: ['kernel.event_subscriber']
