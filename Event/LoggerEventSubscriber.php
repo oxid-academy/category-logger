@@ -2,7 +2,6 @@
 
 namespace OxidAcademy\CategoryLogger\Event;
 
-use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\Eshop\Application\Model\Category;
 use OxidEsales\EshopCommunity\Internal\Framework\Event\AbstractShopAwareEventSubscriber;
 use OxidEsales\EshopCommunity\Internal\Transition\ShopEvents\AfterModelInsertEvent;
