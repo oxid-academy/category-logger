@@ -7,4 +7,4 @@ composer require oxid-academy/category-logger
 ```
 
 ## Description
-This OXID eShop module write an entry to the `source/log/oxideshop.log` file on every category creation, deletion and modification. It uses the event mechanism introduced with OXID eShop 6.2.
+This OXID eShop module writes an entry to the `source/log/oxideshop.log` file on every category creation, deletion and modification. It uses the event mechanism introduced with OXID eShop 6.2.
