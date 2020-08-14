@@ -1,8 +1,10 @@
 # OXID Academy Category Logger
-
-## A OXID Academy Training Module
-This OXID eShop Module is part of the OXID Academy Development Basic Training.
+**This Package is part of the OXID Academy Development Basic Training.**
 
 ## Installation
+```
+composer require oxid-academy/category-logger
+```
 
-## Configuration
+## Description
+This OXID eShop module write an entry to the `source/log/oxideshop.log` file on every category creation, deletion and modification. It uses the event mechanism introduced with OXID eShop 6.2.
