@@ -39,6 +39,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
 
     public function logUpdate(Event $event): void
     {
+        $info = 
         $model = $event->getModel();
 
         if ($this->isCategory($model) === true) {
@@ -48,7 +49,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
 
     private function isCategory(Object $model): bool
     {
-        if (get_class($model) == get_class(oxNew(Category::class))) {
+        if (get_class($model) === Category::class) {
             return true;
         } else {
             return false;
