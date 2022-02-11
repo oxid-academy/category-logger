@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace OxidAcademy\CategoryLogger\Event;
 
 use OxidEsales\Eshop\Application\Model\Category;
@@ -9,6 +11,7 @@ use OxidEsales\EshopCommunity\Internal\Transition\ShopEvents\AfterModelDeleteEve
 use OxidEsales\EshopCommunity\Internal\Transition\ShopEvents\AfterModelUpdateEvent;
 use Symfony\Component\EventDispatcher\Event;
 use Psr\Log\LoggerInterface;
+use function get_class;
 
 class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
 {
@@ -23,7 +26,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
     {
         $model = $event->getModel();
 
-        if ($this->isCategory($model) === true) {
+        if ($this->isCategory($model)) {
             $this->logger->info('Category with ID ' . $model->getId() . ' was created.');
         }
     }
@@ -32,7 +35,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
     {
         $model = $event->getModel();
 
-        if ($this->isCategory($model) === true) {
+        if ($this->isCategory($model)) {
             $this->logger->info('Category with ID ' . $model->getId() . ' was deleted.');
         }
     }
@@ -41,18 +44,14 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
     {
         $model = $event->getModel();
 
-        if ($this->isCategory($model) === true) {
+        if ($this->isCategory($model)) {
             $this->logger->info('Category with ID ' . $model->getId() . ' was updated.');
         }
     }
 
     private function isCategory(Object $model): bool
     {
-        if (get_class($model) === Category::class) {
-            return true;
-        } else {
-            return false;
-        }
+        return get_class($model) === Category::class;
     }
 
     public static function getSubscribedEvents(): array
