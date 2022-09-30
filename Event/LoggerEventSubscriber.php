@@ -22,7 +22,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
         $this->logger = $logger;
     }
 
-    public function logCreation(Event $event): void
+    public function logCreation(AfterModelInsertEvent $event): void
     {
         $model = $event->getModel();
 
@@ -31,7 +31,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
         }
     }
 
-    public function logDeletion(Event $event): void
+    public function logDeletion(AfterModelDeleteEvent $event): void
     {
         $model = $event->getModel();
 
@@ -40,7 +40,7 @@ class LoggerEventSubscriber extends AbstractShopAwareEventSubscriber
         }
     }
 
-    public function logUpdate(Event $event): void
+    public function logUpdate(AfterModelUpdateEvent $event): void
     {
         $model = $event->getModel();
 
