@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.3] - 2022-09-30
+### Changed
+- Simplified `services.yaml` by removing unnecessary loc.
+- Enhanced the `README.md`.
+
+## Fixed
+- `LoggerEventSubscriber` handle methods now using specific event types to be compatible with OXID eShop 6.5.
+
 ## [1.0.2] - 2022-02-14
 ### Changed
 - `composer.json` Increased the PHP requirement to ^8.0.

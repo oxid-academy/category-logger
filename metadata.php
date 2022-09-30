@@ -19,7 +19,7 @@ $aModule = [
         'en' => 'Logs category creation, deletion and update.',
     ],
     'thumbnail'   => '',
-    'version'     => '1.0.2',
+    'version'     => '1.0.3',
     'author'      => 'OXID Academy',
     'url'         => 'https://www.oxid-esales.com/',
     'email'       => 'academy@oxid-esales.com',
